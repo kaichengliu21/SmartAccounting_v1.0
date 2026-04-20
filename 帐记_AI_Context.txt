@@ -1,0 +1,19 @@
+你好，我们需要继续开发/修复我的 iOS 记账 App。以下是项目背景和当前代码结构，请先阅读并理解，不需要回复代码，只需告诉我“已了解”：
+
+1. 【项目基础】
+- App名称：帐记
+- 技术栈：SwiftUI, SwiftData (数据库), AppIntents (快捷指令)
+- 最低兼容：iOS 17+
+
+2. 【核心文件结构】
+- ContentView.swift：主界面，包含三个 Tab（LedgerView 账单明细、StatsView 统计图表、SettingsView 设置页）。
+- Item.swift：包含 Transaction 数据库模型（包含 amount, merchant, category, paymentMethod, isIncome, date 等字段）。
+- AIParseIntent.swift：AppIntents 接口，接收截图文本，调用 DeepSeek API（大模型）解析并结合本地习惯（Few-Shot）自动入库。
+- CategoryManager.swift：本地备用的分类规则引擎。
+
+3. 【当前进展与痛点】
+- 目前核心的“双击背板 -> 截图 OCR -> AI 提取 -> 自动记账”闭环已完全跑通，且带有防止平台过滤的长提示词。
+- 数据库支持了用户在界面修改分类后，AI 能够记住用户的分类习惯。
+
+4. 【本次需求】
+（在这里写上你今天想让我帮你加的新功能或修的 Bug）

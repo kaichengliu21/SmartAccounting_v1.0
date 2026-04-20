@@ -1,10 +1,3 @@
-//
-//  SmartAccountingApp.swift
-//  SmartAccounting
-//
-//  Created by Kai on 2026/4/19.
-//
-
 import SwiftUI
 import SwiftData
 
@@ -12,7 +5,7 @@ import SwiftData
 struct SmartAccountingApp: App {
     var sharedModelContainer: ModelContainer = {
         let schema = Schema([
-            Item.self,
+            Transaction.self,
         ])
         let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
 
